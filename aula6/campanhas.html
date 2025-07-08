@@ -60,11 +60,46 @@
         </div>
     </header>
 
-    <!-- Conteúdo principal -->
+    <!!-- Navbar fixa no topo, expansível para dispositivos móveis, com fundo escuro -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container"><!-- Centraliza conteúdo -->
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-dragon"></i> Fã Clube RPG
+            </a>
+            <!-- Botão para colapsar menu em telas pequenas -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span> <!-- Ícone padrão do Bootstrap -->
+            </button>
+            <!-- Menu que aparece ou desaparece ao clicar no botão toggler -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto"><!-- Alinha à direita -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="personagens.html">Personagens</a>
+                    </li>
+                    <li class="nav-item active"><!-- Aba ativa -->
+                        <a class="nav-link" href="campanhas.html">Campanhas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="forum.html">Fórum</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Conteúdo principal com margem vertical -->
     <div class="container my-5">
-        <!-- Filtros e busca -->
+        <!-- Linha com busca e filtros -->
         <div class="row mb-4">
             <div class="col-md-6">
+                <!-- Input com botão anexado -->
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Buscar campanhas...">
                     <div class="input-group-append">
@@ -74,7 +109,9 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-md-6">
+                <!-- Dropdown inline para filtro por sistema -->
                 <div class="dropdown d-inline mr-2">
                     <button class="btn btn-outline-primary dropdown-toggle" type="button" data-toggle="dropdown">
                         <i class="fas fa-filter"></i> Filtrar por Sistema
@@ -88,13 +125,14 @@
                         <a class="dropdown-item" href="#">Call of Cthulhu</a>
                     </div>
                 </div>
+                <!-- Botão verde que abre o modal para criar nova campanha -->
                 <button class="btn btn-success" data-toggle="modal" data-target="#novaCampanhaModal">
                     <i class="fas fa-plus"></i> Nova Campanha
                 </button>
             </div>
         </div>
 
-        <!-- Abas para diferentes tipos de campanhas -->
+        <!-- Abas para navegar entre tipos de campanhas -->
         <ul class="nav nav-tabs" id="campanhasTab" role="tablist">
             <li class="nav-item">
                 <a class="nav-link active" id="ativas-tab" data-toggle="tab" href="#ativas" role="tab">
@@ -113,12 +151,12 @@
             </li>
         </ul>
 
-        <!-- Conteúdo das abas -->
+        <!-- Conteúdo das abas com borda e padding -->
         <div class="tab-content p-3 border border-top-0 rounded-bottom" id="campanhasTabContent">
-            <!-- Aba Campanhas Ativas -->
+            <!-- Aba Ativas -->
             <div class="tab-pane fade show active" id="ativas" role="tabpanel">
                 <div class="row">
-                    <!-- Campanha 1 -->
+                    <!-- Card de campanha -->
                     <div class="col-lg-6 mb-4">
                         <div class="card h-100">
                             <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
@@ -153,7 +191,7 @@
                         </div>
                     </div>
 
-                    <!-- Campanha 2 -->
+                    <!-- Outro card -->
                     <div class="col-lg-6 mb-4">
                         <div class="card h-100">
                             <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
@@ -190,10 +228,9 @@
                 </div>
             </div>
 
-            <!-- Aba Campanhas Recrutando -->
+            <!-- Aba Recrutando -->
             <div class="tab-pane fade" id="recrutando" role="tabpanel">
                 <div class="row">
-                    <!-- Campanha 3 -->
                     <div class="col-lg-6 mb-4">
                         <div class="card h-100">
                             <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
@@ -225,14 +262,13 @@
                 </div>
             </div>
 
-            <!-- Aba Campanhas Finalizadas -->
+            <!-- Aba Finalizadas -->
             <div class="tab-pane fade" id="finalizadas" role="tabpanel">
                 <div class="alert alert-info">
                     <i class="fas fa-info-circle"></i> Estas campanhas já foram concluídas. Você pode revisitar os registros ou criar uma nova versão.
                 </div>
-                
+
                 <div class="row">
-                    <!-- Campanha 4 -->
                     <div class="col-lg-6 mb-4">
                         <div class="card h-100">
                             <div class="card-header bg-secondary text-white d-flex justify-content-between align-items-center">
@@ -265,7 +301,7 @@
             </div>
         </div>
 
-        <!-- Paginação -->
+        <!-- Paginação centralizada -->
         <nav aria-label="Navegação de campanhas" class="mt-4">
             <ul class="pagination justify-content-center">
                 <li class="page-item disabled">
@@ -281,9 +317,9 @@
         </nav>
     </div>
 
-    <!-- Modal para nova campanha -->
+    <!-- Modal para criar nova campanha -->
     <div class="modal fade" id="novaCampanhaModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-dialog modal-lg" role="document"><!-- Modal grande -->
             <div class="modal-content">
                 <div class="modal-header bg-success text-white">
                     <h5 class="modal-title">Criar Nova Campanha</h5>
@@ -295,7 +331,7 @@
                     <form>
                         <div class="row">
                             <div class="col-md-6">
-                                <div class="form-group">
+                                <div class="form-group"><!-- Espaçamento entre campos -->
                                     <label for="campanhaNome">Nome da Campanha</label>
                                     <input type="text" class="form-control" id="campanhaNome" required>
                                 </div>
@@ -355,7 +391,7 @@
         </div>
     </div>
 
-    <!-- Rodapé (igual em todas as páginas) -->
+    <!-- Rodapé escuro com texto branco -->
     <footer class="bg-dark text-white py-4">
         <div class="container">
             <div class="row">
@@ -365,7 +401,7 @@
                 </div>
                 <div class="col-md-4">
                     <h5>Links rápidos</h5>
-                    <ul class="list-unstyled">
+                    <ul class="list-unstyled"><!-- Remove marcadores -->
                         <li><a href="index.html" class="text-white">Home</a></li>
                         <li><a href="personagens.html" class="text-white">Personagens</a></li>
                         <li><a href="campanhas.html" class="text-white">Campanhas</a></li>

@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sobre - Portfólio com Bootstrap</title>
     <!-- Bootstrap 4.6 CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Navbar -->
+    <!-- Navbar Bootstrap -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
+            <!-- Marca da navbar -->
             <a class="navbar-brand" href="index.html">Meu Portfólio</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- Botão toggle para navbar colapsável em telas pequenas -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <!-- Conteúdo que colapsa (links da navbar) -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
+                    <!-- Itens da navbar -->
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
@@ -40,36 +52,44 @@
         </div>
     </nav>
 
-    <!-- Page Content -->
+    <!-- Conteúdo da página com espaçamentos superiores para evitar que o fixed-top sobreponha -->
     <div class="container mt-5 pt-4">
         <div class="row">
+            <!-- Coluna maior ocupando 8/12 da largura em telas grandes -->
             <div class="col-lg-8">
                 <h1 class="mt-4">Sobre Mim</h1>
-                <hr>
+                <hr />
+                <!-- Componente media para alinhamento de imagem e texto lado a lado -->
                 <div class="media mb-4">
-                    <img class="d-flex mr-3 rounded-circle" src="https://via.placeholder.com/150" alt="Foto de perfil">
+                    <!-- Imagem circular com margem à direita -->
+                    <img class="d-flex mr-3 rounded-circle" src="https://via.placeholder.com/150" alt="Foto de perfil" />
                     <div class="media-body">
                         <h5 class="mt-0">João Silva</h5>
                         <p>Desenvolvedor Web Full Stack com experiência em diversas tecnologias e frameworks.</p>
                     </div>
                 </div>
-                
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae lorem nec nunc viverra tempus. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-                
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+
+                <!-- Card Bootstrap para destacar conteúdo -->
                 <div class="card my-4">
                     <h5 class="card-header">Minha Jornada</h5>
                     <div class="card-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae lorem nec nunc viverra tempus. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
                     </div>
                 </div>
             </div>
-            
+
+            <!-- Coluna menor ocupando 4/12 da largura em telas grandes -->
             <div class="col-lg-4">
+                <!-- Outro card para lista de interesses -->
                 <div class="card my-4">
                     <h5 class="card-header">Interesses</h5>
                     <div class="card-body">
                         <div class="row">
+                            <!-- Duas colunas dentro do card para dividir interesses -->
                             <div class="col-lg-6">
+                                <!-- Lista sem marcadores e sem margem inferior -->
                                 <ul class="list-unstyled mb-0">
                                     <li><i class="fas fa-code"></i> Programação</li>
                                     <li><i class="fas fa-book"></i> Leitura</li>
@@ -90,7 +110,7 @@
         </div>
     </div>
 
-    <!-- Footer -->
+    <!-- Footer estilizado com Bootstrap -->
     <footer class="bg-dark text-white py-4">
         <div class="container text-center">
             <p>&copy; 2025 Meu Portfólio. Todos os direitos reservados.</p>
@@ -102,7 +122,7 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS and dependencies -->
+    <!-- Scripts Bootstrap e dependências -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>

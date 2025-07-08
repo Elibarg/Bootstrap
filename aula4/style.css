@@ -1,53 +1,62 @@
-/* Estilos personalizados */
+/* Espaço no topo para compensar a navbar fixa (que tem 56px de altura) */
 body {
     padding-top: 56px;
 }
 
+/* Estiliza o jumbotron (área destacada no topo da página) */
 .jumbotron {
-    background-color: #f8f9fa;
-    padding: 2rem 1rem;
-    margin-bottom: 0;
-    border-radius: 0;
+    background-color: #f8f9fa; /* Cor clara neutra */
+    padding: 2rem 1rem; /* Espaçamento interno vertical e horizontal */
+    margin-bottom: 0; /* Remove a margem inferior padrão */
+    border-radius: 0; /* Sem bordas arredondadas */
 }
 
+/* Cartões com animação suave ao passar o mouse */
 .card {
-    transition: transform 0.3s;
+    transition: transform 0.3s; /* Transição para a transformação durar 0.3s */
 }
 
+/* Quando o mouse estiver sobre o card, levanta ele visualmente */
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,.1);
+    transform: translateY(-5px); /* Move o card 5px para cima */
+    box-shadow: 0 10px 20px rgba(0,0,0,.1); /* Sombra leve para destacar */
 }
 
+/* Links nas redes sociais com transição suave na cor */
 .social-links a {
     transition: color 0.3s;
 }
 
+/* Quando o mouse passar sobre o link, muda a cor para azul do Bootstrap */
 .social-links a:hover {
-    color: #007bff !important;
+    color: #007bff !important; /* Azul padrão do Bootstrap, !important para sobrepor */
 }
 
+/* Garante que a classe bg-primary use a cor azul do Bootstrap */
 .bg-primary {
     background-color: #007bff !important;
 }
 
+/* Botões primários com cor azul */
 .btn-primary {
     background-color: #007bff;
     border-color: #007bff;
 }
 
+/* Efeito hover para os botões primários, azul mais escuro */
 .btn-primary:hover {
     background-color: #0069d9;
     border-color: #0062cc;
 }
 
-/* Estilos para o formulário de contato */
+/* Estilo para o foco nos inputs do formulário */
 .form-control:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    border-color: #007bff; /* Borda azul */
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25); /* Sombra azul suave ao redor */
 }
 
-/* Responsividade adicional */
+/* Responsividade para telas pequenas (até 768px) */
+/* Diminui o padding do jumbotron para melhor visualização */
 @media (max-width: 768px) {
     .jumbotron {
         padding: 1rem;

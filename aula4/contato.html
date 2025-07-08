@@ -11,160 +11,201 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Meu Portfólio</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="sobre.html">Sobre</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="habilidades.html">Habilidades</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="curriculo.html">Currículo</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="contato.html">Contato</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- Navbar Bootstrap -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container"><!-- Centraliza e limita a largura do conteúdo -->
+    <a class="navbar-brand" href="index.html">Meu Portfólio</a>
+    <!-- Botão para colapsar o menu em telas pequenas -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <!-- Page Content -->
-    <div class="container mt-5 pt-4">
-        <h1 class="mb-4">Entre em Contato</h1>
-        
-        <div class="row">
-            <div class="col-md-8">
-                <div class="card mb-4">
-                    <div class="card-header bg-primary text-white">
-                        <h5>Formulário de Contato</h5>
-                    </div>
-                    <div class="card-body">
-                        <form>
-                            <div class="form-group">
-                                <label for="nome">Nome Completo</label>
-                                <input type="text" class="form-control" id="nome" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">E-mail</label>
-                                <input type="email" class="form-control" id="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="telefone">Telefone</label>
-                                <input type="tel" class="form-control" id="telefone">
-                            </div>
-                            <div class="form-group">
-                                <label>Assunto</label>
-                                <select class="form-control">
-                                    <option>Selecione um assunto</option>
-                                    <option>Proposta de trabalho</option>
-                                    <option>Dúvida</option>
-                                    <option>Sugestão</option>
-                                    <option>Outro</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Sexo</label>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="sexo" id="masculino" value="masculino">
-                                    <label class="form-check-label" for="masculino">Masculino</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="sexo" id="feminino" value="feminino">
-                                    <label class="form-check-label" for="feminino">Feminino</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="sexo" id="outro" value="outro">
-                                    <label class="form-check-label" for="outro">Outro</label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="mensagem">Mensagem</label>
-                                <textarea class="form-control" id="mensagem" rows="5" required></textarea>
-                            </div>
-                            <div class="form-group form-check">
-                                <input type="checkbox" class="form-check-input" id="newsletter">
-                                <label class="form-check-label" for="newsletter">Desejo receber novidades por e-mail</label>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-header bg-primary text-white">
-                        <h5>Informações de Contato</h5>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li class="mb-3">
-                                <i class="fas fa-map-marker-alt fa-lg mr-2 text-primary"></i>
-                                <strong>Endereço:</strong> Rua Exemplo, 123 - São Paulo, SP
-                            </li>
-                            <li class="mb-3">
-                                <i class="fas fa-phone fa-lg mr-2 text-primary"></i>
-                                <strong>Telefone:</strong> (00) 1234-5678
-                            </li>
-                            <li class="mb-3">
-                                <i class="fas fa-envelope fa-lg mr-2 text-primary"></i>
-                                <strong>E-mail:</strong> contato@example.com
-                            </li>
-                            <li>
-                                <i class="fas fa-clock fa-lg mr-2 text-primary"></i>
-                                <strong>Horário:</strong> Seg-Sex: 9h-18h
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div class="card-header bg-primary text-white">
-                        <h5>Redes Sociais</h5>
-                    </div>
-                    <div class="card-body text-center">
-                        <a href="#" class="btn btn-outline-primary mb-2 btn-block">
-                            <i class="fab fa-linkedin mr-2"></i> LinkedIn
-                        </a>
-                        <a href="#" class="btn btn-outline-primary mb-2 btn-block">
-                            <i class="fab fa-github mr-2"></i> GitHub
-                        </a>
-                        <a href="#" class="btn btn-outline-primary btn-block">
-                            <i class="fab fa-twitter mr-2"></i> Twitter
-                        </a>
-                    </div>
-                </div>
-            </div>
+    <!-- Menu que pode ser colapsado -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto"><!-- Alinha os itens do menu à direita -->
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="habilidades.html">Habilidades</a></li>
+        <li class="nav-item"><a class="nav-link" href="curriculo.html">Currículo</a></li>
+        <li class="nav-item active"><!-- Página atual destacada -->
+          <a class="nav-link" href="contato.html">Contato</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Container principal, com margem e padding para não ficar atrás da navbar fixa -->
+<div class="container mt-5 pt-4">
+  <h1 class="mb-4">Entre em Contato</h1>
+
+  <div class="row"><!-- Linha para grid -->
+    <div class="col-md-8"><!-- Coluna ocupando 8/12 da largura em md (telas médias) -->
+
+      <div class="card mb-4"><!-- Card com margem inferior -->
+        <div class="card-header bg-primary text-white"><!-- Cabeçalho azul com texto branco -->
+          <h5>Formulário de Contato</h5>
         </div>
+        <div class="card-body">
+          <form>
+            <div class="form-group"><!-- Espaço para input com label -->
+              <label for="nome">Nome Completo</label>
+              <input type="text" class="form-control" id="nome" required>
+              <!-- form-control: estilo Bootstrap para inputs -->
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="telefone">Telefone</label>
+              <input type="tel" class="form-control" id="telefone">
+            </div>
+
+            <div class="form-group">
+              <label>Assunto</label>
+              <select class="form-control"><!-- select estilizado -->
+                <option>Selecione um assunto</option>
+                <option>Proposta de trabalho</option>
+                <option>Dúvida</option>
+                <option>Sugestão</option>
+                <option>Outro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Sexo</label>
+              <div class="form-check"><!-- Container para checkbox ou radio estilizados -->
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="sexo"
+                  id="masculino"
+                  value="masculino"
+                >
+                <label class="form-check-label" for="masculino">Masculino</label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="sexo"
+                  id="feminino"
+                  value="feminino"
+                >
+                <label class="form-check-label" for="feminino">Feminino</label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="sexo"
+                  id="outro"
+                  value="outro"
+                >
+                <label class="form-check-label" for="outro">Outro</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea class="form-control" id="mensagem" rows="5" required></textarea>
+              <!-- textarea estilizado -->
+            </div>
+
+            <div class="form-group form-check"><!-- Checkbox com label -->
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="newsletter"
+              >
+              <label class="form-check-label" for="newsletter">Desejo receber novidades por e-mail</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+            <!-- btn btn-primary: botão azul padrão -->
+          </form>
+        </div>
+      </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <p>&copy; 2025 Meu Portfólio. Todos os direitos reservados.</p>
-            <div class="social-links">
-                <a href="#" class="text-white mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
-                <a href="#" class="text-white mx-2"><i class="fab fa-github fa-2x"></i></a>
-                <a href="#" class="text-white mx-2"><i class="fab fa-twitter fa-2x"></i></a>
-            </div>
-        </div>
-    </footer>
+    <div class="col-md-4"><!-- Coluna ocupando 4/12 da largura em md -->
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+      <div class="card mb-4">
+        <div class="card-header bg-primary text-white">
+          <h5>Informações de Contato</h5>
+        </div>
+        <div class="card-body">
+          <ul class="list-unstyled"><!-- lista sem estilo de marcação -->
+            <li class="mb-3">
+              <i class="fas fa-map-marker-alt fa-lg mr-2 text-primary"></i>
+              <!-- fa-lg: ícone maior, mr-2: margem direita, text-primary: cor azul -->
+              <strong>Endereço:</strong> Rua Exemplo, 123 - São Paulo, SP
+            </li>
+            <li class="mb-3">
+              <i class="fas fa-phone fa-lg mr-2 text-primary"></i>
+              <strong>Telefone:</strong> (00) 1234-5678
+            </li>
+            <li class="mb-3">
+              <i class="fas fa-envelope fa-lg mr-2 text-primary"></i>
+              <strong>E-mail:</strong> contato@example.com
+            </li>
+            <li>
+              <i class="fas fa-clock fa-lg mr-2 text-primary"></i>
+              <strong>Horário:</strong> Seg-Sex: 9h-18h
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header bg-primary text-white">
+          <h5>Redes Sociais</h5>
+        </div>
+        <div class="card-body text-center"><!-- centraliza o conteúdo -->
+          <a href="#" class="btn btn-outline-primary mb-2 btn-block">
+            <!-- btn-block: botão ocupa toda a largura da coluna -->
+            <i class="fab fa-linkedin mr-2"></i> LinkedIn
+          </a>
+          <a href="#" class="btn btn-outline-primary mb-2 btn-block">
+            <i class="fab fa-github mr-2"></i> GitHub
+          </a>
+          <a href="#" class="btn btn-outline-primary btn-block">
+            <i class="fab fa-twitter mr-2"></i> Twitter
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer Bootstrap -->
+<footer class="bg-dark text-white py-4">
+  <div class="container text-center">
+    <!-- bg-dark: fundo escuro, text-white: texto branco, py-4: padding vertical -->
+    <p>&copy; 2025 Meu Portfólio. Todos os direitos reservados.</p>
+    <div class="social-links">
+      <a href="#" class="text-white mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
+      <a href="#" class="text-white mx-2"><i class="fab fa-github fa-2x"></i></a>
+      <a href="#" class="text-white mx-2"><i class="fab fa-twitter fa-2x"></i></a>
+      <!-- mx-2: margem horizontal entre ícones -->
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts Bootstrap + dependências (jQuery, Popper.js) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

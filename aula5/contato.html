@@ -12,178 +12,281 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <i class="fas fa-star"></i> Fã Clube
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="sobre.html">Sobre</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="contato.html">Contato</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">
-                            <i class="fas fa-user"></i> Login
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+  <!-- navbar: componente Bootstrap para navegação -->
+  <!-- navbar-expand-lg: navbar expansível em telas maiores (largura "lg" e acima) -->
+  <!-- navbar-dark: texto e ícones claros para fundo escuro -->
+  <!-- bg-primary: fundo azul (cor principal do Bootstrap) -->
+  <!-- fixed-top: fixa a navbar no topo da página, mesmo ao rolar -->
 
-    <!-- Page Header -->
-    <header class="jumbotron jumbotron-fluid bg-info text-white text-center">
-        <div class="container">
-            <h1 class="display-4">Entre em Contato</h1>
-            <p class="lead">Tire suas dúvidas ou envie sugestões</p>
-        </div>
-    </header>
+  <div class="container">
+    <!-- container: centraliza o conteúdo e limita a largura com padding responsivo -->
 
-    <!-- Main Content -->
-    <div class="container my-5">
-        <div class="row">
-            <div class="col-md-8 mb-4">
-                <div class="card">
-                    <div class="card-header bg-primary text-white">
-                        <h4 class="mb-0">Formulário de Contato</h4>
-                    </div>
-                    <div class="card-body">
-                        <form>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="nome">Nome</label>
-                                    <input type="text" class="form-control" id="nome" required>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="sobrenome">Sobrenome</label>
-                                    <input type="text" class="form-control" id="sobrenome" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">E-mail</label>
-                                <input type="email" class="form-control" id="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="assunto">Assunto</label>
-                                <select class="form-control" id="assunto" required>
-                                    <option value="">Selecione um assunto</option>
-                                    <option>Dúvida</option>
-                                    <option>Sugestão</option>
-                                    <option>Reclamação</option>
-                                    <option>Elogio</option>
-                                    <option>Outro</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="mensagem">Mensagem</label>
-                                <textarea class="form-control" id="mensagem" rows="5" required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="newsletter">
-                                    <label class="form-check-label" for="newsletter">
-                                        Desejo receber a newsletter do fã clube
-                                    </label>
-                                </div>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-header bg-primary text-white">
-                        <h4 class="mb-0">Informações de Contato</h4>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li class="mb-3">
-                                <i class="fas fa-map-marker-alt fa-lg mr-2 text-primary"></i>
-                                <strong>Endereço:</strong> Rua dos Fãs, 123 - São Paulo, SP
-                            </li>
-                            <li class="mb-3">
-                                <i class="fas fa-phone fa-lg mr-2 text-primary"></i>
-                                <strong>Telefone:</strong> (11) 1234-5678
-                            </li>
-                            <li class="mb-3">
-                                <i class="fas fa-envelope fa-lg mr-2 text-primary"></i>
-                                <strong>E-mail:</strong> contato@fanclub.com
-                            </li>
-                            <li>
-                                <i class="fas fa-clock fa-lg mr-2 text-primary"></i>
-                                <strong>Atendimento:</strong> Seg-Sex: 9h-18h
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div class="card-header bg-primary text-white">
-                        <h4 class="mb-0">Redes Sociais</h4>
-                    </div>
-                    <div class="card-body text-center">
-                        <a href="#" class="btn btn-outline-primary mb-2 btn-block">
-                            <i class="fab fa-facebook-f mr-2"></i> Facebook
-                        </a>
-                        <a href="#" class="btn btn-outline-info mb-2 btn-block">
-                            <i class="fab fa-twitter mr-2"></i> Twitter
-                        </a>
-                        <a href="#" class="btn btn-outline-danger mb-2 btn-block">
-                            <i class="fab fa-instagram mr-2"></i> Instagram
-                        </a>
-                        <a href="#" class="btn btn-outline-danger btn-block">
-                            <i class="fab fa-youtube mr-2"></i> YouTube
-                        </a>
-                    </div>
-                </div>
-            </div>
+    <a class="navbar-brand" href="index.html">
+      <i class="fas fa-star"></i> Fã Clube
+      <!-- navbar-brand: marca/logo da navbar -->
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      <!-- navbar-toggler: botão para abrir menu em dispositivos móveis -->
+      <!-- navbar-toggler-icon: ícone padrão do botão de toggle -->
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- collapse navbar-collapse: área do menu que será recolhida em telas pequenas -->
+
+      <ul class="navbar-nav ml-auto">
+        <!-- navbar-nav: lista de itens da navbar -->
+        <!-- ml-auto: margem esquerda automática, empurrando o menu para a direita -->
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+          <!-- nav-link: link estilizado da navbar -->
+        </li>
+        <!-- Repetido para cada item do menu -->
+        <li class="nav-item active">
+          <a class="nav-link" href="sobre.html">Sobre</a>
+          <!-- active: item ativo, geralmente altera visual para destacar -->
+        </li>
+        <!-- Repetido para cada item do menu -->
+        <li class="nav-item active">
+          <a class="nav-link" href="contato.html">Contato</a>
+          <!-- active: item ativo, geralmente altera visual para destacar -->
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">
+            <i class="fas fa-user"></i> Login
+          </a>
+          <!-- data-toggle/modal: usado para abrir modal do Bootstrap ao clicar -->
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Page Header -->
+<header class="jumbotron jumbotron-fluid bg-info text-white text-center">
+  <!-- jumbotron: área destacada de chamada principal -->
+  <!-- jumbotron-fluid: jumbotron que ocupa largura total -->
+  <!-- bg-info: fundo azul claro do Bootstrap -->
+  <!-- text-white: texto branco -->
+  <!-- text-center: texto centralizado -->
+
+  <div class="container">
+    <!-- container: limita largura e centraliza conteúdo -->
+
+    <h1 class="display-4">Entre em Contato</h1>
+    <!-- display-4: texto grande e estilizado para títulos -->
+
+    <p class="lead">Tire suas dúvidas ou envie sugestões</p>
+    <!-- lead: texto maior para destaque -->
+  </div>
+</header>
+
+
+<!-- Main Content -->
+<div class="container my-5">
+  <!-- container: limita largura e centraliza -->
+  <!-- my-5: margem vertical (topo e base) tamanho 5 (aprox 3rem) -->
+
+  <div class="row">
+    <!-- row: cria linha para sistema de grid -->
+
+    <div class="col-md-8 mb-4">
+      <!-- col-md-8: coluna ocupa 8/12 da largura em telas médias para cima -->
+      <!-- mb-4: margem inferior tamanho 4 -->
+
+      <div class="card">
+        <!-- card: componente de cartão com bordas, sombra e padding -->
+
+        <div class="card-header bg-primary text-white">
+          <!-- card-header: cabeçalho do card -->
+          <!-- bg-primary: fundo azul escuro -->
+          <!-- text-white: texto branco -->
+
+          <h4 class="mb-0">Formulário de Contato</h4>
+          <!-- mb-0: remove margem inferior -->
         </div>
+
+        <div class="card-body">
+          <!-- card-body: corpo do card com padding -->
+
+          <form>
+            <div class="form-row">
+              <!-- form-row: linha dentro do formulário para usar grid -->
+
+              <div class="form-group col-md-6">
+                <!-- form-group: grupo para inputs com espaçamento e alinhamento -->
+                <!-- col-md-6: ocupa metade da largura em telas médias ou maiores -->
+
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" id="nome" required>
+                <!-- form-control: input estilizado pelo Bootstrap -->
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" class="form-control" id="sobrenome" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="assunto">Assunto</label>
+              <select class="form-control" id="assunto" required>
+                <option value="">Selecione um assunto</option>
+                <option>Dúvida</option>
+                <option>Sugestão</option>
+                <option>Reclamação</option>
+                <option>Elogio</option>
+                <option>Outro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea class="form-control" id="mensagem" rows="5" required></textarea>
+            </div>
+
+            <div class="form-group">
+              <div class="form-check">
+                <!-- form-check: container para checkbox ou radio com estilo -->
+                <input class="form-check-input" type="checkbox" id="newsletter">
+                <label class="form-check-label" for="newsletter">
+                  Desejo receber a newsletter do fã clube
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+            <!-- btn btn-primary: botão com cor azul padrão do Bootstrap -->
+          </form>
+        </div>
+      </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-3">
-                    <h5>Sobre o Fã Clube</h5>
-                    <p>O fã clube oficial onde os verdadeiros fãs se encontram para compartilhar sua paixão.</p>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <h5>Links Rápidos</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html" class="text-white">Home</a></li>
-                        <li><a href="sobre.html" class="text-white">Sobre</a></li>
-                        <li><a href="contato.html" class="text-white">Contato</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <h5>Redes Sociais</h5>
-                    <div class="social-links">
-                        <a href="#" class="text-white mr-2"><i class="fab fa-facebook fa-2x"></i></a>
-                        <a href="#" class="text-white mr-2"><i class="fab fa-twitter fa-2x"></i></a>
-                        <a href="#" class="text-white mr-2"><i class="fab fa-instagram fa-2x"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-youtube fa-2x"></i></a>
-                    </div>
-                </div>
-            </div>
-            <hr class="bg-light">
-            <div class="text-center">
-                <p class="mb-0">&copy; 2025 Fã Clube. Todos os direitos reservados.</p>
-            </div>
+    <div class="col-md-4">
+      <!-- col-md-4: ocupa 4/12 da largura em telas médias para cima -->
+
+      <div class="card mb-4">
+        <div class="card-header bg-primary text-white">
+          <h4 class="mb-0">Informações de Contato</h4>
         </div>
-    </footer>
+        <div class="card-body">
+          <ul class="list-unstyled">
+            <!-- list-unstyled: remove estilos padrão da lista -->
+
+            <li class="mb-3">
+              <i class="fas fa-map-marker-alt fa-lg mr-2 text-primary"></i>
+              <!-- fa-lg: ícone maior -->
+              <!-- mr-2: margem direita para espaçar ícone do texto -->
+              <!-- text-primary: cor azul para o ícone -->
+              <strong>Endereço:</strong> Rua dos Fãs, 123 - São Paulo, SP
+            </li>
+
+            <li class="mb-3">
+              <i class="fas fa-phone fa-lg mr-2 text-primary"></i>
+              <strong>Telefone:</strong> (11) 1234-5678
+            </li>
+
+            <li class="mb-3">
+              <i class="fas fa-envelope fa-lg mr-2 text-primary"></i>
+              <strong>E-mail:</strong> contato@fanclub.com
+            </li>
+
+            <li>
+              <i class="fas fa-clock fa-lg mr-2 text-primary"></i>
+              <strong>Atendimento:</strong> Seg-Sex: 9h-18h
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header bg-primary text-white">
+          <h4 class="mb-0">Redes Sociais</h4>
+        </div>
+        <div class="card-body text-center">
+          <!-- text-center: centraliza o conteúdo -->
+
+          <a href="#" class="btn btn-outline-primary mb-2 btn-block">
+            <!-- btn: botão padrão -->
+            <!-- btn-outline-primary: botão com borda azul e fundo transparente -->
+            <!-- mb-2: margem inferior -->
+            <!-- btn-block: botão ocupa toda largura do container -->
+
+            <i class="fab fa-facebook-f mr-2"></i> Facebook
+          </a>
+          <a href="#" class="btn btn-outline-info mb-2 btn-block">
+            <i class="fab fa-twitter mr-2"></i> Twitter
+          </a>
+          <a href="#" class="btn btn-outline-danger mb-2 btn-block">
+            <i class="fab fa-instagram mr-2"></i> Instagram
+          </a>
+          <a href="#" class="btn btn-outline-danger btn-block">
+            <i class="fab fa-youtube mr-2"></i> YouTube
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4">
+  <!-- bg-dark: fundo escuro -->
+  <!-- text-white: texto branco -->
+  <!-- py-4: padding vertical (topo e base) tamanho 4 -->
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-4 mb-3">
+        <!-- col-md-4: ocupa 4/12 da largura em telas médias -->
+        <!-- mb-3: margem inferior -->
+
+        <h5>Sobre o Fã Clube</h5>
+        <p>O fã clube oficial onde os verdadeiros fãs se encontram para compartilhar sua paixão.</p>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <h5>Links Rápidos</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-white">Home</a></li>
+          <li><a href="sobre.html" class="text-white">Sobre</a></li>
+          <li><a href="contato.html" class="text-white">Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <h5>Redes Sociais</h5>
+        <div class="social-links">
+          <a href="#" class="text-white mr-2"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="#" class="text-white mr-2"><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="#" class="text-white mr-2"><i class="fab fa-instagram fa-2x"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-youtube fa-2x"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="bg-light">
+    <!-- hr: linha horizontal, bg-light para cor clara -->
+
+    <div class="text-center">
+      <!-- centraliza o texto -->
+      <p class="mb-0">&copy; 2025 Fã Clube. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

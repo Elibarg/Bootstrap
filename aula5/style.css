@@ -1,79 +1,90 @@
-/* Estilos personalizados */
+/* Ajusta o espaçamento superior para compensar a navbar fixa (altura 56px) */
 body {
     padding-top: 56px;
 }
 
+/* Remove margem inferior e borda arredondada do jumbotron para ficar "colado" */
 .jumbotron {
     margin-bottom: 0;
     border-radius: 0;
 }
 
+/* Cartões com efeito de transição suave para transformação e margem inferior */
 .card {
     transition: transform 0.3s;
     margin-bottom: 20px;
 }
 
+/* Ao passar o mouse sobre o card, sobe 5px e ganha sombra leve */
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0,0,0,.1);
 }
 
+/* Links de redes sociais com transição suave na cor */
 .social-links a {
     transition: color 0.3s;
 }
 
+/* Ao passar o mouse nos links sociais, cor azul Bootstrap */
 .social-links a:hover {
-    color: #007bff !important;
+    color: #007bff !important; /* !important para garantir sobreposição */
 }
 
+/* Sobrescreve a cor de fundo da classe bg-primary para azul padrão do Bootstrap */
 .bg-primary {
     background-color: #007bff !important;
 }
 
+/* Botão primário com cor azul e borda azul */
 .btn-primary {
     background-color: #007bff;
     border-color: #007bff;
 }
 
+/* Hover do botão primário fica com azul mais escuro */
 .btn-primary:hover {
     background-color: #0069d9;
     border-color: #0062cc;
 }
 
-/* Estilos para o formulário de contato */
+/* Foco em inputs (form-control) com borda azul e sombra suave azulada */
 .form-control:focus {
     border-color: #007bff;
     box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
 }
 
-/* Responsividade adicional */
+/* Responsividade para telas menores que 768px */
 @media (max-width: 768px) {
+    /* Reduz padding do jumbotron para caber melhor em telas pequenas */
     .jumbotron {
         padding: 1rem;
     }
     
+    /* Reduz o tamanho da fonte do título grande (display-4) */
     .display-4 {
         font-size: 2.5rem;
     }
 }
 
-/* Estilo para o accordion */
+/* Botões do tipo link (btn-link) estilizados com azul e sem sublinhado */
 .btn-link {
     color: #007bff;
     text-decoration: none;
 }
 
+/* Hover do btn-link deixa azul mais escuro e mantém sem sublinhado */
 .btn-link:hover {
     color: #0056b3;
     text-decoration: none;
 }
 
-/* Estilo para o carousel */
+/* Margem inferior para o componente carousel */
 .carousel {
     margin-bottom: 20px;
 }
 
-/* Estilo para o footer */
+/* Força cor de fundo escura para o footer */
 footer {
-    background-color: #343a40 !important;
+    background-color: #343a40 !important; /* cinza escuro Bootstrap */
 }
