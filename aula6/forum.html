@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Meta tags obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Fórum - Fã Clube RPG</title>
+</head>
+<body>
+    <!-- Navbar (igual em todas as páginas) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-dragon"></i> Fã Clube RPG
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="personagens.html">Personagens</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="campanhas.html">Campanhas</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="forum.html">Fórum</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cabeçalho da página -->
+    <header class="bg-primary text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1><i class="fas fa-comments"></i> Fórum da Comunidade</h1>
+                    <p class="lead">Discuta estratégias, compartilhe histórias e faça perguntas</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <div class="container my-5">
+        <!-- Barra de pesquisa e novo tópico -->
+        <div class="row mb-4">
+            <div class="col-md-8">
+                <form class="form-inline">
+                    <div class="input-group w-100">
+                        <input type="text" class="form-control" placeholder="Buscar no fórum...">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-4 text-right">
+                <button class="btn btn-success" data-toggle="modal" data-target="#novoTopicoModal">
+                    <i class="fas fa-plus"></i> Novo Tópico
+                </button>
+            </div>
+        </div>
+
+        <!-- Categorias do fórum -->
+        <div class="card mb-4">
+            <div class="card-header bg-dark text-white">
+                <h5 class="mb-0"><i class="fas fa-list"></i> Categorias</h5>
+            </div>
+            <div class="card-body p-0">
+                <div class="list-group list-group-flush">
+                    <!-- Categoria 1 -->
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="mb-1"><i class="fas fa-dice-d20 text-danger"></i> Sistemas de RPG</h6>
+                                <small class="text-muted">Discussões sobre D&D, Pathfinder, Tormenta e outros sistemas</small>
+                            </div>
+                            <span class="badge badge-primary badge-pill">128 tópicos</span>
+                        </div>
+                    </a>
+                    
+                    <!-- Categoria 2 -->
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="mb-1"><i class="fas fa-book text-info"></i> Histórias de Campanha</h6>
+                                <small class="text-muted">Compartilhe as aventuras épicas dos seus personagens</small>
+                            </div>
+                            <span class="badge badge-primary badge-pill">76 tópicos</span>
+                        </div>
+                    </a>
+                    
+                    <!-- Categoria 3 -->
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="mb-1"><i class="fas fa-question-circle text-warning"></i> Dúvidas de Novatos</h6>
+                                <small class="text-muted">Tire suas dúvidas sobre regras e mecânicas de jogo</small>
+                            </div>
+                            <span class="badge badge-primary badge-pill">42 tópicos</span>
+                        </div>
+                    </a>
+                    
+                    <!-- Categoria 4 -->
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="mb-1"><i class="fas fa-paint-brush text-success"></i> Arte e Homebrew</h6>
+                                <small class="text-muted">Compartilhe artes de personagens e conteúdos criados por você</small>
+                            </div>
+                            <span class="badge badge-primary badge-pill">35 tópicos</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tópicos recentes -->
+        <div class="card">
+            <div class="card-header bg-dark text-white">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0"><i class="fas fa-fire"></i> Tópicos Recentes</h5>
+                    <div class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-outline-light active">Mais recentes</button>
+                        <button type="button" class="btn btn-outline-light">Mais populares</button>
+                        <button type="button" class="btn btn-outline-light">Não lidos</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body p-0">
+                <div class="list-group list-group-flush">
+                    <!-- Tópico 1 -->
+                    <div class="list-group-item">
+                        <div class="d-flex">
+                            <div class="mr-3 text-center">
+                                <img src="img/user1.jpg" class="rounded-circle" width="50" height="50" alt="Usuário">
+                                <small class="d-block text-muted">Gandalf</small>
+                            </div>
+                            <div class="flex-grow-1">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="mb-1">
+                                        <a href="#" class="text-dark">Como balancear encontros para grupo de 6 jogadores?</a>
+                                    </h6>
+                                    <small class="text-muted">2 horas atrás</small>
+                                </div>
+                                <p class="mb-1">Estou mestrando uma campanha de D&D 5e para um grupo grande e estou tendo dificuldades para criar encontros desafiadores mas justos...</p>
+                                <div class="d-flex justify-content-between">
+                                    <small class="text-muted">
+                                        <i class="fas fa-comments"></i> 12 respostas | 
+                                        <i class="fas fa-eye"></i> 84 visualizações | 
+                                        <i class="fas fa-tag"></i> D&D 5e
+                                    </small>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">Responder</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tópico 2 -->
+                    <div class="list-group-item">
+                        <div class="d-flex">
+                            <div class="mr-3 text-center">
+                                <img src="img/user2.jpg" class="rounded-circle" width="50" height="50" alt="Usuário">
+                                <small class="d-block text-muted">Legolas</small>
+                            </div>
+                            <div class="flex-grow-1">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="mb-1">
+                                        <a href="#" class="text-dark">[História] A Queda do Rei Dragão - Capítulo 3</a>
+                                    </h6>
+                                    <small class="text-muted">5 horas atrás</small>
+                                </div>
+                                <p class="mb-1">Continuando nossa saga, o grupo finalmente chegou às ruínas de Drak'Thar, onde dizem que o Rei Dragão foi derrotado séculos atrás...</p>
+                                <div class="d-flex justify-content-between">
+                                    <small class="text-muted">
+                                        <i class="fas fa-comments"></i> 8 respostas | 
+                                        <i class="fas fa-eye"></i> 56 visualizações | 
+                                        <i class="fas fa-tag"></i> Histórias
+                                    </small>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">Responder</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tópico 3 -->
+                    <div class="list-group-item">
+                        <div class="d-flex">
+                            <div class="mr-3 text-center">
+                                <img src="img/user3.jpg" class="rounded-circle" width="50" height="50" alt="Usuário">
+                                <small class="d-block text-muted">Aragorn</small>
+                            </div>
+                            <div class="flex-grow-1">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="mb-1">
+                                        <a href="#" class="text-dark">[Homebrew] Classe: Caçador de Recompensas - Feedback</a>
+                                    </h6>
+                                    <small class="text-muted">Ontem, 21:34</small>
+                                </div>
+                                <p class="mb-1">Criei uma classe homebrew inspirada em caçadores de recompensas e gostaria de feedback sobre o balanceamento. Segue link para o documento...</p>
+                                <div class="d-flex justify-content-between">
+                                    <small class="text-muted">
+                                        <i class="fas fa-comments"></i> 15 respostas | 
+                                        <i class="fas fa-eye"></i> 102 visualizações | 
+                                        <i class="fas fa-tag"></i> Homebrew
+                                    </small>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">Responder</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tópico 4 -->
+                    <div class="list-group-item">
+                        <div class="d-flex">
+                            <div class="mr-3 text-center">
+                                <img src="img/user4.jpg" class="rounded-circle" width="50" height="50" alt="Usuário">
+                                <small class="d-block text-muted">Frodo</small>
+                            </div>
+                            <div class="flex-grow-1">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="mb-1">
+                                        <a href="#" class="text-dark">Qual sistema recomendam para iniciantes?</a>
+                                    </h6>
+                                    <small class="text-muted">Ontem, 18:12</small>
+                                </div>
+                                <p class="mb-1">Quero começar a jogar RPG com alguns amigos, todos somos iniciantes. Qual sistema vocês recomendam para começar? Estamos entre D&D e Tormenta...</p>
+                                <div class="d-flex justify-content-between">
+                                    <small class="text-muted">
+                                        <i class="fas fa-comments"></i> 23 respostas | 
+                                        <i class="fas fa-eye"></i> 145 visualizações | 
+                                        <i class="fas fa-tag"></i> Novatos
+                                    </small>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">Responder</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <nav aria-label="Navegação de tópicos">
+                    <ul class="pagination justify-content-center mb-0">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Anterior</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Próxima</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para novo tópico -->
+    <div class="modal fade" id="novoTopicoModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">Criar Novo Tópico</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="topicoTitulo">Título do Tópico</label>
+                            <input type="text" class="form-control" id="topicoTitulo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="topicoCategoria">Categoria</label>
+                            <select class="form-control" id="topicoCategoria" required>
+                                <option value="">Selecione uma categoria...</option>
+                                <option>Sistemas de RPG</option>
+                                <option>Histórias de Campanha</option>
+                                <option>Dúvidas de Novatos</option>
+                                <option>Arte e Homebrew</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="topicoConteudo">Conteúdo</label>
+                            <textarea class="form-control" id="topicoConteudo" rows="8" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="topicoTags">Tags (separadas por vírgula)</label>
+                            <input type="text" class="form-control" id="topicoTags" placeholder="ex: D&D, Tormenta, Homebrew">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success">Publicar Tópico</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé (igual em todas as páginas) -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Sobre nós</h5>
+                    <p>Um fã clube dedicado a todos os tipos de RPG, desde os clássicos até os mais modernos.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Links rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="personagens.html" class="text-white">Personagens</a></li>
+                        <li><a href="campanhas.html" class="text-white">Campanhas</a></li>
+                        <li><a href="forum.html" class="text-white">Fórum</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Redes sociais</h5>
+                    <a href="#" class="text-white mr-2"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="#" class="text-white mr-2"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href="#" class="text-white mr-2"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-discord fa-2x"></i></a>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Fã Clube RPG. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript do Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+    
+    <!-- Script para mostrar nome do arquivo selecionado -->
+    <script>
+        // Mostrar nome do arquivo quando selecionado (para o modal de novo personagem)
+        $('.custom-file-input').on('change', function() {
+            let fileName = $(this).val().split('\\').pop();
+            $(this).next('.custom-file-label').addClass("selected").html(fileName);
+        });
+        
+        // Inicializar tooltips
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+</body>
+</html>

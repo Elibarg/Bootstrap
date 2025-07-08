@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Meta tags obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Personagens - Fã Clube RPG</title>
+</head>
+<body>
+    <!-- Navbar (igual em todas as páginas) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-dragon"></i> Fã Clube RPG
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="personagens.html">Personagens</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="campanhas.html">Campanhas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="forum.html">Fórum</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cabeçalho da página -->
+    <header class="bg-primary text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1><i class="fas fa-user-astronaut"></i> Meus Personagens</h1>
+                    <p class="lead">Gerencie e crie novos personagens para suas aventuras</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <div class="container my-5">
+        <!-- Barra de ações -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <!-- Formulário de busca -->
+                <form class="form-inline">
+                    <div class="input-group w-100">
+                        <input type="text" class="form-control" placeholder="Buscar personagem...">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6 text-right">
+                <!-- Botão para adicionar novo personagem -->
+                <button class="btn btn-success" data-toggle="modal" data-target="#novoPersonagemModal">
+                    <i class="fas fa-plus"></i> Novo Personagem
+                </button>
+            </div>
+        </div>
+
+        <!-- Lista de personagens -->
+        <div class="row">
+            <!-- Personagem 1 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-header bg-dark text-white">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="mb-0">Aragorn</h5>
+                            <div>
+                                <!-- Dropdown de ações -->
+                                <div class="dropdown d-inline">
+                                    <button class="btn btn-sm btn-outline-light dropdown-toggle" type="button" data-toggle="dropdown">
+                                        <i class="fas fa-cog"></i>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#"><i class="fas fa-edit"></i> Editar</a>
+                                        <a class="dropdown-item" href="#"><i class="fas fa-copy"></i> Duplicar</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item text-danger" href="#"><i class="fas fa-trash"></i> Excluir</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-center mb-3">
+                            <img src="img/char1.jpg" class="img-fluid rounded-circle" style="width: 120px; height: 120px; object-fit: cover;" alt="Aragorn">
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Classe:</span>
+                                <span class="font-weight-bold">Guerreiro</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Raça:</span>
+                                <span class="font-weight-bold">Humano</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Nível:</span>
+                                <span class="badge badge-pill badge-primary">15</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-light">
+                        <a href="#" class="btn btn-outline-primary btn-block">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Personagem 2 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-header bg-dark text-white">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="mb-0">Gandalf</h5>
+                            <div>
+                                <div class="dropdown d-inline">
+                                    <button class="btn btn-sm btn-outline-light dropdown-toggle" type="button" data-toggle="dropdown">
+                                        <i class="fas fa-cog"></i>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#"><i class="fas fa-edit"></i> Editar</a>
+                                        <a class="dropdown-item" href="#"><i class="fas fa-copy"></i> Duplicar</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item text-danger" href="#"><i class="fas fa-trash"></i> Excluir</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-center mb-3">
+                            <img src="img/char2.jpg" class="img-fluid rounded-circle" style="width: 120px; height: 120px; object-fit: cover;" alt="Gandalf">
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Classe:</span>
+                                <span class="font-weight-bold">Mago</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Raça:</span>
+                                <span class="font-weight-bold">Sátiro</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Nível:</span>
+                                <span class="badge badge-pill badge-primary">99</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-light">
+                        <a href="#" class="btn btn-outline-primary btn-block">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Personagem 3 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-header bg-dark text-white">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="mb-0">Legolas</h5>
+                            <div>
+                                <div class="dropdown d-inline">
+                                    <button class="btn btn-sm btn-outline-light dropdown-toggle" type="button" data-toggle="dropdown">
+                                        <i class="fas fa-cog"></i>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#"><i class="fas fa-edit"></i> Editar</a>
+                                        <a class="dropdown-item" href="#"><i class="fas fa-copy"></i> Duplicar</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item text-danger" href="#"><i class="fas fa-trash"></i> Excluir</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-center mb-3">
+                            <img src="img/char3.jpg" class="img-fluid rounded-circle" style="width: 120px; height: 120px; object-fit: cover;" alt="Legolas">
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Classe:</span>
+                                <span class="font-weight-bold">Arqueiro</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Raça:</span>
+                                <span class="font-weight-bold">Elfo</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Nível:</span>
+                                <span class="badge badge-pill badge-primary">23</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-light">
+                        <a href="#" class="btn btn-outline-primary btn-block">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Paginação -->
+        <nav aria-label="Navegação de personagens">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">Anterior</a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Próxima</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Modal para novo personagem -->
+    <div class="modal fade" id="novoPersonagemModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">Criar Novo Personagem</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="charName">Nome do Personagem</label>
+                                    <input type="text" class="form-control" id="charName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="charClass">Classe</label>
+                                    <select class="form-control" id="charClass" required>
+                                        <option value="">Selecione...</option>
+                                        <option>Guerreiro</option>
+                                        <option>Mago</option>
+                                        <option>Arqueiro</option>
+                                        <option>Ladino</option>
+                                        <option>Clérigo</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="charRace">Raça</label>
+                                    <select class="form-control" id="charRace" required>
+                                        <option value="">Selecione...</option>
+                                        <option>Humano</option>
+                                        <option>Elfo</option>
+                                        <option>Anão</option>
+                                        <option>Orc</option>
+                                        <option>Halfling</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="charLevel">Nível</label>
+                                    <input type="number" class="form-control" id="charLevel" min="1" max="100" value="1">
+                                </div>
+                                <div class="form-group">
+                                    <label for="charImage">Imagem do Personagem</label>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="charImage">
+                                        <label class="custom-file-label" for="charImage">Escolher arquivo...</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="charBio">Biografia</label>
+                                    <textarea class="form-control" id="charBio" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success">Criar Personagem</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé (igual em todas as páginas) -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Sobre nós</h5>
+                    <p>Um fã clube dedicado a todos os tipos de RPG, desde os clássicos até os mais modernos.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Links rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="personagens.html" class="text-white">Personagens</a></li>
+                        <li><a href="campanhas.html" class="text-white">Campanhas</a></li>
+                        <li><a href="forum.html" class="text-white">Fórum</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Redes sociais</h5>
+                    <a href="#" class="text-white mr-2"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="#" class="text-white mr-2"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href="#" class="text-white mr-2"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-discord fa-2x"></i></a>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Fã Clube RPG. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript do Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

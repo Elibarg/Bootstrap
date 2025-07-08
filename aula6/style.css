@@ -1,0 +1,55 @@
+/* Estilos gerais */
+body {
+    padding-top: 56px; /* Compensar a altura da navbar fixa */
+}
+
+/* Carrossel */
+.carousel-item {
+    height: 400px;
+    background-color: #777;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+/* Cards */
+.card {
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Navbar */
+.navbar-brand {
+    font-weight: bold;
+}
+
+/* Página de login */
+.card {
+    border-radius: 10px;
+}
+
+.card-header {
+    border-radius: 10px 10px 0 0 !important;
+}
+
+.input-group-text {
+    width: 40px;
+    justify-content: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 300px;
+    }
+    
+    .display-4 {
+        font-size: 2.5rem;
+    }
+}

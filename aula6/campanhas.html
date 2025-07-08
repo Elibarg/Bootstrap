@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Meta tags obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Campanhas - Fã Clube RPG</title>
+</head>
+<body>
+    <!-- Navbar (igual em todas as páginas) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-dragon"></i> Fã Clube RPG
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="personagens.html">Personagens</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="campanhas.html">Campanhas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="forum.html">Fórum</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cabeçalho da página -->
+    <header class="bg-primary text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1><i class="fas fa-book"></i> Nossas Campanhas</h1>
+                    <p class="lead">Participe de aventuras épicas ou crie sua própria jornada</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <div class="container my-5">
+        <!-- Filtros e busca -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Buscar campanhas...">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="dropdown d-inline mr-2">
+                    <button class="btn btn-outline-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                        <i class="fas fa-filter"></i> Filtrar por Sistema
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Todos</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">D&D 5e</a>
+                        <a class="dropdown-item" href="#">Pathfinder</a>
+                        <a class="dropdown-item" href="#">Tormenta</a>
+                        <a class="dropdown-item" href="#">Call of Cthulhu</a>
+                    </div>
+                </div>
+                <button class="btn btn-success" data-toggle="modal" data-target="#novaCampanhaModal">
+                    <i class="fas fa-plus"></i> Nova Campanha
+                </button>
+            </div>
+        </div>
+
+        <!-- Abas para diferentes tipos de campanhas -->
+        <ul class="nav nav-tabs" id="campanhasTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="ativas-tab" data-toggle="tab" href="#ativas" role="tab">
+                    <i class="fas fa-play-circle"></i> Ativas
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="recrutando-tab" data-toggle="tab" href="#recrutando" role="tab">
+                    <i class="fas fa-user-plus"></i> Recrutando
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="finalizadas-tab" data-toggle="tab" href="#finalizadas" role="tab">
+                    <i class="fas fa-flag-checkered"></i> Finalizadas
+                </a>
+            </li>
+        </ul>
+
+        <!-- Conteúdo das abas -->
+        <div class="tab-content p-3 border border-top-0 rounded-bottom" id="campanhasTabContent">
+            <!-- Aba Campanhas Ativas -->
+            <div class="tab-pane fade show active" id="ativas" role="tabpanel">
+                <div class="row">
+                    <!-- Campanha 1 -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">A Jornada do Anel</h5>
+                                <span class="badge badge-success">Ativa</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex mb-3">
+                                    <img src="img/campaign1.jpg" class="rounded mr-3" style="width: 100px; height: 100px; object-fit: cover;" alt="Campanha">
+                                    <div>
+                                        <p class="card-text">Uma aventura épica através da Terra Média para destruir o Um Anel.</p>
+                                        <div class="mb-2">
+                                            <span class="badge badge-info mr-1">D&D 5e</span>
+                                            <span class="badge badge-secondary">Fantasia</span>
+                                        </div>
+                                        <div class="small">
+                                            <i class="fas fa-users mr-1"></i> 4/6 jogadores
+                                            <i class="fas fa-calendar-alt ml-3 mr-1"></i> Quintas, 20h
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-success" style="width: 25%">25%</div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-primary btn-sm">Detalhes</a>
+                                <button class="btn btn-outline-secondary btn-sm float-right" data-toggle="tooltip" title="Favoritar">
+                                    <i class="far fa-star"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Campanha 2 -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">Cidade dos Ladrões</h5>
+                                <span class="badge badge-success">Ativa</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex mb-3">
+                                    <img src="img/campaign2.jpg" class="rounded mr-3" style="width: 100px; height: 100px; object-fit: cover;" alt="Campanha">
+                                    <div>
+                                        <p class="card-text">Uma campanha urbana cheia de intrigas políticas e crimes.</p>
+                                        <div class="mb-2">
+                                            <span class="badge badge-info mr-1">Pathfinder</span>
+                                            <span class="badge badge-secondary">Urbano</span>
+                                        </div>
+                                        <div class="small">
+                                            <i class="fas fa-users mr-1"></i> 5/5 jogadores
+                                            <i class="fas fa-calendar-alt ml-3 mr-1"></i> Sábados, 15h
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-success" style="width: 65%">65%</div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-primary btn-sm">Detalhes</a>
+                                <button class="btn btn-outline-secondary btn-sm float-right" data-toggle="tooltip" title="Favoritar">
+                                    <i class="far fa-star"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Aba Campanhas Recrutando -->
+            <div class="tab-pane fade" id="recrutando" role="tabpanel">
+                <div class="row">
+                    <!-- Campanha 3 -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">O Templo Esquecido</h5>
+                                <span class="badge badge-warning">Recrutando</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex mb-3">
+                                    <img src="img/campaign3.jpg" class="rounded mr-3" style="width: 100px; height: 100px; object-fit: cover;" alt="Campanha">
+                                    <div>
+                                        <p class="card-text">Explore ruínas antigas em busca de um artefato perdido.</p>
+                                        <div class="mb-2">
+                                            <span class="badge badge-info mr-1">D&D 5e</span>
+                                            <span class="badge badge-secondary">Exploração</span>
+                                        </div>
+                                        <div class="small">
+                                            <i class="fas fa-users mr-1"></i> 2/4 jogadores
+                                            <i class="fas fa-calendar-alt ml-3 mr-1"></i> Domingos, 18h
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-primary btn-sm">Detalhes</a>
+                                <button class="btn btn-success btn-sm float-right">Participar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Aba Campanhas Finalizadas -->
+            <div class="tab-pane fade" id="finalizadas" role="tabpanel">
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle"></i> Estas campanhas já foram concluídas. Você pode revisitar os registros ou criar uma nova versão.
+                </div>
+                
+                <div class="row">
+                    <!-- Campanha 4 -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-header bg-secondary text-white d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">Reino dos Dragões</h5>
+                                <span class="badge badge-light">Concluída</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex mb-3">
+                                    <img src="img/campaign4.jpg" class="rounded mr-3" style="width: 100px; height: 100px; object-fit: cover;" alt="Campanha">
+                                    <div>
+                                        <p class="card-text">Uma campanha de 2 anos onde os jogadores enfrentaram o conselho de dragões anciões.</p>
+                                        <div class="mb-2">
+                                            <span class="badge badge-info mr-1">D&D 5e</span>
+                                            <span class="badge badge-secondary">Fantasia</span>
+                                        </div>
+                                        <div class="small">
+                                            <i class="fas fa-clock mr-1"></i> 24 meses
+                                            <i class="fas fa-trophy ml-3 mr-1"></i> Nível 1-20
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-primary btn-sm">Registros</a>
+                                <button class="btn btn-outline-secondary btn-sm float-right">Recriar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Paginação -->
+        <nav aria-label="Navegação de campanhas" class="mt-4">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">Anterior</a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Próxima</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Modal para nova campanha -->
+    <div class="modal fade" id="novaCampanhaModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">Criar Nova Campanha</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="campanhaNome">Nome da Campanha</label>
+                                    <input type="text" class="form-control" id="campanhaNome" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="campanhaSistema">Sistema de RPG</label>
+                                    <select class="form-control" id="campanhaSistema" required>
+                                        <option value="">Selecione...</option>
+                                        <option>Dungeons & Dragons 5e</option>
+                                        <option>Pathfinder</option>
+                                        <option>Tormenta RPG</option>
+                                        <option>Call of Cthulhu</option>
+                                        <option>Outro</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="campanhaJogadores">Número de Jogadores</label>
+                                    <input type="number" class="form-control" id="campanhaJogadores" min="2" max="10" value="4">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="campanhaDia">Dia da Semana</label>
+                                    <select class="form-control" id="campanhaDia">
+                                        <option>Segunda-feira</option>
+                                        <option>Terça-feira</option>
+                                        <option>Quarta-feira</option>
+                                        <option>Quinta-feira</option>
+                                        <option>Sexta-feira</option>
+                                        <option>Sábado</option>
+                                        <option>Domingo</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="campanhaHora">Horário</label>
+                                    <input type="time" class="form-control" id="campanhaHora">
+                                </div>
+                                <div class="form-group">
+                                    <label for="campanhaImagem">Imagem da Campanha (Opcional)</label>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="campanhaImagem">
+                                        <label class="custom-file-label" for="campanhaImagem">Escolher arquivo...</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="campanhaDesc">Descrição da Campanha</label>
+                            <textarea class="form-control" id="campanhaDesc" rows="4" placeholder="Descreva o tema, cenário e estilo da campanha..."></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success">Criar Campanha</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé (igual em todas as páginas) -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Sobre nós</h5>
+                    <p>Um fã clube dedicado a todos os tipos de RPG, desde os clássicos até os mais modernos.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Links rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="personagens.html" class="text-white">Personagens</a></li>
+                        <li><a href="campanhas.html" class="text-white">Campanhas</a></li>
+                        <li><a href="forum.html" class="text-white">Fórum</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Redes sociais</h5>
+                    <a href="#" class="text-white mr-2"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="#" class="text-white mr-2"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href="#" class="text-white mr-2"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-discord fa-2x"></i></a>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Fã Clube RPG. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript do Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
